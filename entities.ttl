@@ -1,0 +1,340 @@
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix bee: <https://baia.pjjk.net/entities/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix beo: <https://baia.pjjk.net/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix sdo: <https://schema.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/ama#> .
+@base <https://baia.pjjk.net/entities/> .
+
+<https://baia.pjjk.net/entities/> a owl:Ontology ;
+    owl:imports beo: ;
+    dc:title "Beowulf Entities"@en ;
+    rdfs:isDefinedBy bee:entities.ttl ;
+    dc:description "Ontology for identifying things from Beowulf and its analogues"@en ;
+    dc:source <https://openlibrary.org/books/OL5472902M/Beowulf#id> ;
+.
+
+### Peoples and clans
+bee:BattleReam a owl:Class, rdfs:Class, beo:People ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:label "Battle Reams"@en ;
+    rdfs:comment "A Norwegian people."@en ;
+.
+
+bee:Brising a owl:Class, rdfs:Class, beo:Clan ;
+    rdfs:subClassOf beo:Dwarf ; 
+    rdfs:label "Brisings"@en ;
+    rdfs:comment "Fire dwarves."@en ;
+.
+
+bee:Bronding a owl:Class, rdfs:Class, beo:Clan ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:label "Brondings"@en ;
+.
+
+bee:Dane a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A Scandanavian people."@en ;
+    rdfs:label "Dane"@en ;
+.
+
+bee:Frank a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A Germanic people."@en ;
+    rdfs:label "Frank"@en ;
+.
+
+bee:Frisian a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A Germanic people."@en ;
+    rdfs:label "Frisian"@en ;
+.
+
+bee:Geat a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A Scandanavian people."@en ;
+    rdfs:label "Geat"@en ;
+.
+
+bee:Giftha a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A East Germanic people."@en ;
+    rdfs:label "Giftha"@en ;
+.
+
+bee:HalfDane a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A Scandanavian people."@en ;
+    rdfs:label "Half-Dane"@en ;
+.
+
+bee:Heathobard a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A Scandanavian people."@en ;
+    rdfs:label "Heathobard"@en ;
+.
+
+bee:Helming a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A people."@en ;
+    rdfs:label "Helming"@en ;
+.
+
+bee:Hemming a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A people."@en ;
+    rdfs:label "Hemming"@en ;
+.
+
+bee:Hetware a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A Frankish people."@en ;
+    rdfs:label "Hetware"@en ;
+.
+
+bee:Huga a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A Frankish people."@en ;
+    rdfs:label "Hetware"@en ;
+.
+
+bee:Scylding a beo:Clan, owl:Class ;
+    rdfs:subClassOf beo:Person ;
+    rdfs:comment "A clan claiming kinship or descent from Scyld Shefing."@en ;
+    rdfs:label "Scylding"@en ;
+    .
+
+bee:Scylfing a beo:Clan, owl:Class ;
+    rdfs:subClassOf beo:Person ;
+    rdfs:comment "Swedish royal family, and by refernce the Swedes."@en ;
+    rdfs:label "Scylfing"@en ;
+    .
+
+bee:Shefing a beo:Clan, owl:Class ;
+    rdfs:subClassOf beo:Person ;
+    rdfs:comment "A clan, descendents of the mythical Sheaf."@en ;
+    rdfs:label "Shefing"@en ;
+    .
+
+bee:Swede a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A Scandanavian people."@en ;
+    rdfs:label "Swede"@en ;
+    .
+
+bee:Waymunding a beo:Clan, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A Scandanavian family."@en ;
+    rdfs:label "Swede"@en ;
+    .
+
+bee:WeatherGeat a beo:Clan, owl:Class ;
+    rdfs:subClassOf beo:Person, beo:Geat ; 
+    rdfs:comment "The 'storm-loving' Geats."@en ;
+    rdfs:label "Weather-Geat"@en ;
+    .
+
+bee:Wendel a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A northern people, the Vandals."@en ;
+    rdfs:label "Wendel"@en ;
+    .
+
+bee:Wulfing a beo:People, owl:Class ;
+    rdfs:subClassOf beo:Person ; 
+    rdfs:comment "A Germanic people."@en ;
+    rdfs:label "Wulfing"@en ;
+    .
+
+#################################################################
+#    Individuals
+#################################################################
+
+### People etc.
+
+bee:Abel a owl:NamedIndividual , beo:Person .
+
+bee:Alfhere a owl:NamedIndividual , beo:Person .
+
+bee:Ashhere a owl:NamedIndividual , beo:Person .
+
+bee:Beanstan  a owl:NamedIndividual , beo:Person .
+
+bee:Beow a owl:NamedIndividual , beo:Person ;
+    owl:differentFrom bee:Beowulf ;
+    rdfs:comment "A mythical ancestor, ruler of the Scyldings."@en ;
+.
+
+bee:Beowulf a owl:NamedIndividual , beo:Person .
+
+bee:Breca a owl:NamedIndividual , beo:Person .
+
+bee:Cain a owl:NamedIndividual , beo:Person .
+
+bee:Cain a owl:NamedIndividual , beo:Person .
+
+bee:DayRaven a owl:NamedIndividual , beo:Person .
+
+bee:Eadgils a owl:NamedIndividual , beo:Person .
+
+bee:Eanmund a owl:NamedIndividual , beo:Person .
+
+bee:Edgelaf a owl:NamedIndividual , beo:Person .
+
+bee:Edgetheow a owl:NamedIndividual , beo:Person .
+
+bee:Edgewela a owl:NamedIndividual , beo:Person .
+
+bee:Eofor a owl:NamedIndividual , beo:Person .
+
+bee:Eomer a owl:NamedIndividual , beo:Person .
+
+bee:Eormenric a owl:NamedIndividual , beo:Person .
+
+bee:Finn a owl:NamedIndividual , beo:Person .
+
+bee:Fitela a owl:NamedIndividual , beo:Person .
+
+bee:Folcwalda a owl:NamedIndividual , beo:Person .
+
+bee:Freawaru a owl:NamedIndividual , beo:Person .
+
+bee:Froda a owl:NamedIndividual , beo:Person .
+
+bee:Garmund a owl:NamedIndividual , beo:Person .
+
+bee:Grendel a owl:NamedIndividual , beo:Monster .
+
+bee:Guthlaf a owl:NamedIndividual , beo:Person .
+
+bee:Halga a owl:NamedIndividual , beo:Person .
+
+bee:Hama a owl:NamedIndividual , beo:Person .
+
+bee:Hareth a owl:NamedIndividual , beo:Person .
+
+bee:Hathkin a owl:NamedIndividual , beo:Person .
+
+bee:Healfdene a owl:NamedIndividual , beo:Person .
+
+bee:Heardred a owl:NamedIndividual , beo:Person .
+
+bee:Heatholaf a owl:NamedIndividual , beo:Person .
+
+bee:Hengest a owl:NamedIndividual , beo:Person .
+
+bee:Heorogar a owl:NamedIndividual , beo:Person .
+
+bee:Heoroweard a owl:NamedIndividual , beo:Person .
+
+bee:Herebeald a owl:NamedIndividual , beo:Person .
+
+bee:Heremod a owl:NamedIndividual , beo:Person .
+
+bee:Hereric a owl:NamedIndividual , beo:Person .
+
+bee:Hildeburgh a owl:NamedIndividual , beo:Person .
+
+bee:Hnæf a owl:NamedIndividual , beo:Person .
+
+bee:Hoc a owl:NamedIndividual , beo:Person .
+
+bee:Hrethel a owl:NamedIndividual , beo:Person .
+
+bee:HrethelsDaughter a owl:NamedIndividual , beo:Person .
+
+bee:Hrethric a owl:NamedIndividual , beo:Person .
+
+bee:Hrothgar a owl:NamedIndividual , beo:Person .
+
+bee:Hrothmund a owl:NamedIndividual , beo:Person .
+
+bee:Hrothulf a owl:NamedIndividual , beo:Person .
+
+bee:Hunlaf a owl:NamedIndividual , beo:Person .
+
+bee:Hygd a owl:NamedIndividual , beo:Person .
+
+bee:Hygelic a owl:NamedIndividual , beo:Person .
+
+bee:Ingeld a owl:NamedIndividual , beo:Person .
+
+bee:Ingwine a owl:NamedIndividual , beo:Person .
+
+bee:Offa a owl:NamedIndividual , beo:Person .
+
+bee:Hthere a owl:NamedIndividual , beo:Person .
+
+bee:Onela a owl:NamedIndividual , beo:Person .
+
+bee:Ongentheow a owl:NamedIndividual , beo:Person .
+
+bee:Oslaf a owl:NamedIndividual , beo:Person .
+
+bee:Scyld a owl:NamedIndividual , beo:Person ;
+    rdfs:comment "Mythical forebearer of the Scyldings."@en ;
+    rdfs:label "Scyld"@en ;
+.
+
+bee:Sigemund a owl:NamedIndividual , beo:Person .
+
+bee:Scyld a owl:NamedIndividual , beo:Person .
+
+bee:Swerting a owl:NamedIndividual , beo:Person .
+
+bee:Unferth a owl:NamedIndividual , beo:Person .
+
+bee:Ursula a owl:NamedIndividual , beo:Person .
+
+bee:Wæls a owl:NamedIndividual , beo:Person .
+
+bee:Wayland a owl:NamedIndividual , beo:Person .
+
+bee:Wealtheow a owl:NamedIndividual , beo:Person .
+
+bee:Weoxstan a owl:NamedIndividual , beo:Person .
+
+bee:Wiglaf a owl:NamedIndividual , beo:Person .
+
+bee:Withergyld a owl:NamedIndividual , beo:Person .
+
+bee:Wonred a owl:NamedIndividual , beo:Person .
+
+bee:Wulf a owl:NamedIndividual , beo:Person .
+
+bee:Wulfgar a owl:NamedIndividual , beo:Person .
+
+bee:Yrmenlaf a owl:NamedIndividual , beo:Person .
+
+#### Places
+bee:Earnaness  a owl:NamedIndividual , beo:Place 
+.
+
+bee:Heorot  a owl:NamedIndividual , beo:Place 
+.
+
+bee:Hrefnawudu  a owl:NamedIndividual , beo:Place ;
+    rdfs:label "Raven's Wood"@en ;
+.    
+
+bee:Hreosnabeorgh  a owl:NamedIndividual , beo:Place ;
+.    
+
+bee:Hronesness  a owl:NamedIndividual , beo:Place ;
+    rdfs:label "Whales ness"@en ;
+.
+
+
+### Things
+
+bee:Hrunting a owl:NamedIndividual , beo:Sword ;
+    rdfs:label "Hrunting"@en ;
+.
+
+bee:Nailing a owl:NamedIndividual , beo:Sword ;
+    rdfs:label "Nailing"@en ;
+.

@@ -1,0 +1,76 @@
+@prefix : <https://baia.pjjk.net/beowulf/> .
+@prefix bee: <https://baia.pjjk.net/entities/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix beo: <https://baia.pjjk.net/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo:    <https://schema.org/>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: rdf:type owl:Ontology ;
+    owl:imports beo: ,
+                bee: ;
+    dc:title "Beowulf (Poem)"@en ;
+    dc:source <https://www.wikidata.org/wiki/Q48328> ;
+    dc:source <https://openlibrary.org/books/OL5472902M/Beowulf#id> ;
+    dc:description "Assertions from the poem Beowulf."@en .
+
+bee:Scyld a bee:Shefing ; 
+    beo:personName "Scyld Shefing"@en ;
+    beo:gender beo:Male ;
+.
+
+:Event001 a beo:Event ;
+    rdfs:label "Scyld's fighting" ;
+    dc:description "Scyld took mead-benches, taught foes to fear him."@en ;
+    beo:participant bee:Scyld ;
+.
+
+:Event002 a beo:Event ;
+    rdfs:label "Finding of Scyld" ;
+    dc:description "Scyld found in childhood, lacking clothing."@en ;
+    beo:participant bee:Scyld ;
+.
+
+:Event003 a beo:Event ;
+    rdfs:label "Rule of Scyld" ;
+    dc:description "The clans settled on the coast obey Scyld."@en ;
+    beo:participant bee:Scyld ;
+.
+
+bee:Scyld dc:description "A good king."@en
+.
+
+bee:Beow a bee:Scylding ;
+    beo:gender beo:Male ;
+    beo:parent bee:Scyld ;
+    beo:personName "Beowulf"@ang, "Beow"@ang ;
+.
+
+bee:Cain a beo:Person ;
+    beo:killed bee:Abel ;
+    beo:descendant bee:Grendel ;
+.
+
+bee:Abel a beo:Person .
+
+bee:Hrothgar a bee:Scylding ;
+    beo:personName  "Hrothgar"@en ,
+                    "Hrōðgār"@ang ;
+.
+
+bee:Scyld a bee:Shefing ; 
+    beo:personName "Scyld Shefing"@en ;
+    beo:child bee:Beow ;
+.
+
+bee:Beowulf a bee:Geat ;
+    beo:personName "Beowulf"@en ,
+                   "Beowulf"@ang ;
+    beo:killed bee:Grendel ;
+    beo:parent bee:Edgetheow , bee:HrethelsDaughter;
+    rdfs:comment "The hero of the poem."@en ;
+.

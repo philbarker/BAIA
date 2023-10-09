@@ -1,0 +1,232 @@
+@prefix beo: <https://baia.pjjk.net/ontology/> .
+@prefix be: <https://baia.pjjk.net/entities/> .
+# include standard prefixes
+@prefix dc:     <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sdo:    <https://schema.org/>.
+@prefix owl:    <http://www.w3.org/2002/07/owl#>.
+
+beo: a owl:Ontology ;
+#    owl:imports dc: , rdf: , rdfs: ;
+    dc:description "Ontology for describing things from Beowulf and its analogues"@en ;
+    dc:title "Beowulf Ontology"@en ;
+    rdfs:isDefinedBy <ontology.ttl> .
+
+## Classes
+beo:Clan a owl:Class, rdfs:Class ;
+    rdfs:subClassOf foaf:Agent ; 
+    rdfs:comment "Groups of people based on perceived kinship or familial loyalty."@en
+.
+
+beo:Dwarf  a owl:Class, rdfs:Class ;
+    rdfs:subClassOf foaf:Agent ;
+    rdfs:comment "Humanoid creatures, small but sturdy."@en ;
+    rdfs:label "Dwarf"@en ;
+    .
+
+beo:Event a owl:Class, rdfs:Class ;
+    owl:equivalentClass sdo:Event ;
+    rdfs:comment "Things that are alleged to have happened."@en ;
+    rdfs:label "Event"@en ;
+    .
+
+beo:Creature a owl:Class, rdfs:Class ;
+    owl:unionOf ( beo:Person beo:Monster beo:Dwarf ) ;
+    rdfs:subClassOf foaf:Agent ;
+    rdfs:comment "Individual agents."@en ;
+    rdfs:label "Creature"@en ;
+    .
+
+beo:Monster  a owl:Class, rdfs:Class ;
+    rdfs:subClassOf foaf:Agent ;
+    rdfs:comment "Monsters, real or imaginary."@en ;
+    rdfs:label "Monster"@en ;
+    .
+
+beo:People a owl:Class, rdfs:Class ;
+    rdfs:subClassOf foaf:Agent ;
+    rdfs:comment "Broad groupings of individuals with a common identity."@en ;
+    rdfs:label "People"@en ;
+.
+
+beo:Person a owl:Class, rdfs:Class ;
+    rdfs:subClassOf foaf:Agent ;
+    owl:equivalentClass sdo:Person ;
+    rdfs:comment "Humans, real or imaginary."@en ;
+    rdfs:label "Person"@en ;
+    .
+
+beo:Place a owl:Class, rdfs:Class ;
+    owl:equivalentClass sdo:Place ;
+    rdfs:comment "Physical locations."@en ;
+    rdfs:label "Place"@en ;
+    .
+
+beo:Gender a owl:Class, rdfs:Class ;
+    rdfs:comment "Genders."@en ;
+    rdfs:label "Gender"@en ;
+    .
+
+beo:Male a beo:Gender; 
+    rdfs:comment "Male gender."@en ;
+    rdfs:label "Male"@en ;
+    .
+
+beo:Female a beo:Gender ;
+    rdfs:comment "Female gender."@en ;
+    rdfs:label "Female"@en ;
+    .
+
+beo:NonBinary a beo:Gender ;
+    rdfs:comment "Non-binary gender."@en ;
+    rdfs:label "Non-binary"@en ;
+.
+
+beo:Instrument a owl:Class, rdfs:Class ;
+    rdfs:comment "The means by which something is done."@en ;
+    rdfs:label "Instrument"@en ;
+    .
+
+beo:Weapon a owl:Class, rdfs:Class ;
+    rdfs:subClassOf beo:Instrument ;
+    rdfs:comment "An instrument of war."@en ;
+    rdfs:label "Weapon"@en ;
+    .
+
+beo:Sword a owl:Class, rdfs:Class ;
+    rdfs:subClassOf beo:Weapon ;
+    rdfs:comment "Long stabbing and slashing weapons."@en ;
+    rdfs:label "Sword"@en ;
+    .
+
+## Properties
+
+### Personal properties
+beo:gender a owl:ObjectProperty, rdf:Property ;
+    rdfs:comment "The gender of someone."@en ;
+    rdfs:label "Gender"@en ;
+    rdfs:domain beo:Creature ;
+    rdfs:range beo:Gender ;
+    .
+
+beo:name  a owl:DatatypeProperty, rdf:Property ;
+    rdfs:comment "The name of something."@en ;
+    rdfs:label "Name"@en ;
+    owl:equivalentProperty sdo:name ;
+    .
+
+beo:personName a owl:DatatypeProperty, rdf:Property ;
+    rdfs:comment "The name of someone."@en ;
+    rdfs:label "Person name"@en ;
+    rdfs:domain beo:Person ;
+    rdfs:subPropertyOf beo:name ;
+    .
+
+### Inter-agent properties
+beo:ancestor a owl:ObjectProperty ;
+    rdfs:comment "Pregenitor. Parent, grandparent, great grandparent etc."@en ;
+    rdfs:label "descendant"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    owl:inverseOf beo:descendant ;
+    .
+
+beo:brother a owl:ObjectProperty ;
+    rdfs:comment "Male sibling."@en ;
+    rdfs:label "brother"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    rdfs:subPropertyOf beo:sibling ;
+    .
+
+beo:child a owl:ObjectProperty ;
+    rdfs:comment "Son or daughter; direct offspring."@en ;
+    rdfs:label "Child"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    owl:inverseOf beo:parent ;
+    rdfs:subPropertyOf beo:descendant, beo:kin ;
+    .
+
+beo:descendant a owl:ObjectProperty ;
+    rdfs:comment "Progeny; direct or indirect offspring. Child, grandchild, great grandchild etc."@en ;
+    rdfs:label "descendant"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    owl:inverseOf beo:ancestor ;
+    .
+
+beo:killed a owl:ObjectProperty ;
+    rdfs:comment "Caused the death of."@en ;
+    rdfs:label "Killed"@en ;
+    rdfs:domain foaf:Agent ;
+    owl:inverseOf beo:killedBy ;
+    .
+
+beo:killedBy a owl:ObjectProperty ;
+    rdfs:comment "Death was caused by."@en ;
+    rdfs:label "Killed by"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    owl:inverseOf beo:killed ;
+    .
+
+beo:kin a owl:ObjectProperty ;
+    rdfs:comment "In the family."@en ;
+    rdfs:label "kin"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    owl:inverseOf beo:kin ;
+    .
+
+beo:parent a owl:ObjectProperty ;
+    rdfs:comment "Father or mother."@en ;
+    rdfs:label "Parent"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    owl:inverseOf beo:child ;
+    rdfs:subPropertyOf beo:ancestor, beo:kin ;
+    .
+
+beo:sibling a owl:ObjectProperty ;
+    rdfs:comment "Someone with the same parent(s)."@en ;
+    rdfs:label "sibling"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    owl:inverseOf beo:sibling ;
+    rdfs:subPropertyOf beo:kin ;
+    .
+
+beo:sister a owl:ObjectProperty ;
+    rdfs:comment "Female sibling."@en ;
+    rdfs:label "sister"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    rdfs:subPropertyOf beo:sibling ;
+    .
+
+beo:participant a owl:ObjectProperty ;
+    rdfs:comment "An agent taking part in an event."@en ;
+    rdfs:label "participant"@en ;
+    rdfs:domain foaf:Event ;
+    rdfs:range foaf:Agent ;
+    owl:inverseOf beo:participatedIn ;
+    .
+
+beo:participatedIn a owl:ObjectProperty ;
+    rdfs:comment "An event an agent took part in."@en ;
+    rdfs:label "participated in"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Event ;
+    owl:inverseOf beo:participant ;
+    .
+
+beo:describedIn a owl:ObjectProperty ;
+    rdfs:comment "Indicates where something is described."@en ;
+    rdfs:label "described in"@en ;
+    rdfs:range foaf:Agent ;
+    rdfs:subPropertyOf beo:sibling ;
+    .
