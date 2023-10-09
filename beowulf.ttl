@@ -44,11 +44,28 @@ bee:Scyld a bee:Shefing ;
 bee:Scyld dc:description "A good king."@en
 .
 
+bee:Scyld beo:son bee:Beow ;
+.
+
 bee:Beow a bee:Scylding ;
     beo:gender beo:Male ;
-    beo:parent bee:Scyld ;
+    beo:father bee:Scyld ;
     beo:personName "Beowulf"@ang, "Beow"@ang ;
 .
+
+:Event004 a beo:Death ;
+    rdfs:label "Death of Scyld" ;
+    dc:description "At the hour shaped for him Scyld departed."@en ;
+    beo:participant bee:Scyld ;
+.
+
+:Event005 a beo:Funeral ;
+    rdfs:label "Funeral of Scyld" ;
+    dc:description "A boat with ringed neck rode in the haven ... [they] gave him to the flood."@en ;
+    beo:participant bee:Scyld, bee:Scylding ;
+.
+
+
 
 bee:Cain a beo:Person ;
     beo:killed bee:Abel ;

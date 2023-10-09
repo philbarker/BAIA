@@ -21,6 +21,12 @@ beo:Clan a owl:Class, rdfs:Class ;
     rdfs:comment "Groups of people based on perceived kinship or familial loyalty."@en
 .
 
+beo:Death a owl:Class, rdfs:Class ;
+    rdfs:subClassOf beo:Event ; 
+    rdfs:comment "Event in which somone dies."@en ;
+    rdfs:label "Death"@en ;
+    .
+
 beo:Dwarf  a owl:Class, rdfs:Class ;
     rdfs:subClassOf foaf:Agent ;
     rdfs:comment "Humanoid creatures, small but sturdy."@en ;
@@ -31,6 +37,12 @@ beo:Event a owl:Class, rdfs:Class ;
     owl:equivalentClass sdo:Event ;
     rdfs:comment "Things that are alleged to have happened."@en ;
     rdfs:label "Event"@en ;
+    .
+
+beo:Funeral a owl:Class, rdfs:Class ;
+    rdfs:subClassOf beo:Event ; 
+    rdfs:comment "Ritual event disposing of a body."@en ;
+    rdfs:label "Funeral"@en ;
     .
 
 beo:Creature a owl:Class, rdfs:Class ;
@@ -151,12 +163,29 @@ beo:child a owl:ObjectProperty ;
     rdfs:subPropertyOf beo:descendant, beo:kin ;
     .
 
+beo:daughter a owl:ObjectProperty ;
+    rdfs:comment "Female child."@en ;
+    rdfs:label "Daughter"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    rdfs:subPropertyOf geo:child, beo:descendant, beo:kin ;
+    .
+
 beo:descendant a owl:ObjectProperty ;
     rdfs:comment "Progeny; direct or indirect offspring. Child, grandchild, great grandchild etc."@en ;
     rdfs:label "descendant"@en ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
     owl:inverseOf beo:ancestor ;
+    .
+
+beo:father a owl:ObjectProperty ;
+    rdfs:comment "Male parent."@en ;
+    rdfs:label "Father"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    owl:inverseOf beo:child ;
+    rdfs:subPropertyOf beo:parent, beo:kin ;
     .
 
 beo:killed a owl:ObjectProperty ;
@@ -180,6 +209,15 @@ beo:kin a owl:ObjectProperty ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
     owl:inverseOf beo:kin ;
+    .
+
+beo:mother a owl:ObjectProperty ;
+    rdfs:comment "Female parent."@en ;
+    rdfs:label "Mother"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    owl:inverseOf beo:child ;
+    rdfs:subPropertyOf beo:parent, beo:kin ;
     .
 
 beo:parent a owl:ObjectProperty ;
@@ -206,6 +244,14 @@ beo:sister a owl:ObjectProperty ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
     rdfs:subPropertyOf beo:sibling ;
+    .
+
+beo:son a owl:ObjectProperty ;
+    rdfs:comment "Male child."@en ;
+    rdfs:label "Son"@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent ;
+    rdfs:subPropertyOf beo:child, beo:descendant, beo:kin ;
     .
 
 beo:participant a owl:ObjectProperty ;
