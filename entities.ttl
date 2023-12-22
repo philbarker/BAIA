@@ -311,11 +311,9 @@ bee:Wulfgar a owl:NamedIndividual , beo:Person .
 bee:Yrmenlaf a owl:NamedIndividual , beo:Person .
 
 #### Places
-bee:Earnaness  a owl:NamedIndividual , beo:Place 
-.
+bee:Earnaness  a owl:NamedIndividual , beo:Place .
 
-bee:Heorot  a owl:NamedIndividual , beo:Place 
-.
+bee:Heorot  a owl:NamedIndividual , beo:Place .
 
 bee:Hrefnawudu  a owl:NamedIndividual , beo:Place ;
     rdfs:label "Raven's Wood"@en ;

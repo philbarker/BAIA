@@ -23,6 +23,7 @@ bee:Scyld a bee:Shefing ;
     beo:gender beo:Male ;
 .
 
+## lines 1-52
 :Event001 a beo:Event ;
     rdfs:label "Scyld's fighting" ;
     dc:description "Scyld took mead-benches, taught foes to fear him."@en ;
@@ -65,6 +66,32 @@ bee:Beow a bee:Scylding ;
     beo:participant bee:Scyld, bee:Scylding ;
 .
 
+## lines 53-85
+bee:Beow a beo:Dane ;
+.
+
+bee:Healfdene a bee:Scylding ;
+    beo:father bee:Beow ;
+    beo:son bee:Heorogar, bee:Hrothgar, bee:Halga ;
+    beo:daughter bee:Ursula ;
+. 
+
+bee:Ursula beo:husband bee:Onela ;
+.
+
+bee:Onela a beo:Scylfing .
+
+bee:Hrothgar a bee:Scylding ;
+    beo:personName  "Hrothgar"@en ,
+                    "Hrōðgār"@ang ;
+.
+
+
+:Event006 a beo:Action ;
+    dc:description "Hrothgar builds Heorot" ;
+    beo:agent bee:Hrothgar ;
+    beo:object bee:Heorot ;
+    .
 
 
 bee:Cain a beo:Person ;
@@ -73,11 +100,6 @@ bee:Cain a beo:Person ;
 .
 
 bee:Abel a beo:Person .
-
-bee:Hrothgar a bee:Scylding ;
-    beo:personName  "Hrothgar"@en ,
-                    "Hrōðgār"@ang ;
-.
 
 bee:Scyld a bee:Shefing ; 
     beo:personName "Scyld Shefing"@en ;

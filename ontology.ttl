@@ -13,9 +13,17 @@ beo: a owl:Ontology ;
 #    owl:imports dc: , rdf: , rdfs: ;
     dc:description "Ontology for describing things from Beowulf and its analogues"@en ;
     dc:title "Beowulf Ontology"@en ;
-    rdfs:isDefinedBy <ontology.ttl> .
+    rdfs:isDefinedBy <https://baia.pjjk.net/ontology> .
 
 ## Classes
+beo:Action a owl:Class, rdfs:Class ;
+    rdfs:subClassOf beo:Event ;
+    owl:equivalentClass sdo:Action ;
+    rdfs:comment "An action performed by a direct agent and indirect participants upon a direct object." ;
+    rdfs:label "Action" ;
+.
+
+
 beo:Clan a owl:Class, rdfs:Class ;
     rdfs:subClassOf foaf:Agent ; 
     rdfs:comment "Groups of people based on perceived kinship or familial loyalty."@en
@@ -137,13 +145,14 @@ beo:personName a owl:DatatypeProperty, rdf:Property ;
     rdfs:subPropertyOf beo:name ;
     .
 
-### Inter-agent properties
-beo:ancestor a owl:ObjectProperty ;
+### Inter-agent relationships
+beo:ancestor a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Pregenitor. Parent, grandparent, great grandparent etc."@en ;
     rdfs:label "descendant"@en ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
     owl:inverseOf beo:descendant ;
+    owl:propertyDisjointWith beo:descendant ;
     .
 
 beo:brother a owl:ObjectProperty ;
@@ -168,24 +177,34 @@ beo:daughter a owl:ObjectProperty ;
     rdfs:label "Daughter"@en ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
-    rdfs:subPropertyOf geo:child, beo:descendant, beo:kin ;
+    rdfs:subPropertyOf beo:child, beo:descendant, beo:kin ;
     .
 
-beo:descendant a owl:ObjectProperty ;
+beo:descendant a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Progeny; direct or indirect offspring. Child, grandchild, great grandchild etc."@en ;
     rdfs:label "descendant"@en ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
     owl:inverseOf beo:ancestor ;
+    owl:propertyDisjointWith beo:ancestor ;
     .
 
-beo:father a owl:ObjectProperty ;
-    rdfs:comment "Male parent."@en ;
+beo:father a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:comment "Male biological parent."@en ;
     rdfs:label "Father"@en ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
     owl:inverseOf beo:child ;
     rdfs:subPropertyOf beo:parent, beo:kin ;
+    .
+
+beo:husband a owl:ObjectProperty ;
+    rdfs:comment "Male spouse."@en ;
+    rdfs:label "Husband"@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    owl:inverseOf beo:spouse ;
+    rdfs:subPropertyOf beo:spouse, beo:kin ;
     .
 
 beo:killed a owl:ObjectProperty ;
@@ -203,7 +222,7 @@ beo:killedBy a owl:ObjectProperty ;
     owl:inverseOf beo:killed ;
     .
 
-beo:kin a owl:ObjectProperty ;
+beo:kin a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "In the family."@en ;
     rdfs:label "kin"@en ;
     rdfs:domain foaf:Agent ;
@@ -211,8 +230,8 @@ beo:kin a owl:ObjectProperty ;
     owl:inverseOf beo:kin ;
     .
 
-beo:mother a owl:ObjectProperty ;
-    rdfs:comment "Female parent."@en ;
+beo:mother a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:comment "Female biological parent."@en ;
     rdfs:label "Mother"@en ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
@@ -221,7 +240,7 @@ beo:mother a owl:ObjectProperty ;
     .
 
 beo:parent a owl:ObjectProperty ;
-    rdfs:comment "Father or mother."@en ;
+    rdfs:comment "Biological father or mother."@en ;
     rdfs:label "Parent"@en ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
@@ -254,25 +273,58 @@ beo:son a owl:ObjectProperty ;
     rdfs:subPropertyOf beo:child, beo:descendant, beo:kin ;
     .
 
-beo:participant a owl:ObjectProperty ;
-    rdfs:comment "An agent taking part in an event."@en ;
-    rdfs:label "participant"@en ;
-    rdfs:domain foaf:Event ;
-    rdfs:range foaf:Agent ;
-    owl:inverseOf beo:participatedIn ;
+beo:spouse a owl:ObjectProperty ;
+    rdfs:comment "Married partner."@en ;
+    rdfs:label "Spouse"@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    rdfs:subPropertyOf beo:kin ;
+    .
+
+beo:wife a owl:ObjectProperty ;
+    rdfs:comment "Female spouse."@en ;
+    rdfs:label "Wife"@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    owl:inverseOf beo:spouse ;
+    rdfs:subPropertyOf beo:spouse, beo:kin ;
+    .
+
+# Event & Action related properties
+beo:agent a owl:ObjectProperty ;
+    rdfs:subPropertyOf beo:participant ;
+    rdfs:comment "The performer of an action."@en ;
+    rdfs:label "Agent" ;
+    rdfs:domain beo:Action ;
+    rdfs:range beo:agent ;
+    .
+
+beo:describedIn a owl:ObjectProperty ;
+    rdfs:comment "Indicates where something is described."@en ;
+    rdfs:label "described in"@en ;
+    .
+
+beo:object a owl:ObjectProperty ;
+    rdfs:subPropertyOf beo:participant ;
+    rdfs:comment "The thing on which an action is performed."@en ;
+    rdfs:label "Object" ;
+    rdfs:domain beo:Action ;
+    rdfs:range owl:Thing ;
     .
 
 beo:participatedIn a owl:ObjectProperty ;
     rdfs:comment "An event an agent took part in."@en ;
     rdfs:label "participated in"@en ;
     rdfs:domain foaf:Agent ;
-    rdfs:range foaf:Event ;
+    rdfs:range beo:Event ;
     owl:inverseOf beo:participant ;
     .
 
-beo:describedIn a owl:ObjectProperty ;
-    rdfs:comment "Indicates where something is described."@en ;
-    rdfs:label "described in"@en ;
+beo:participant a owl:ObjectProperty ;
+    rdfs:comment "An agent taking part in an event."@en ;
+    rdfs:label "participant"@en ;
+    rdfs:domain beo:Event ;
     rdfs:range foaf:Agent ;
-    rdfs:subPropertyOf beo:sibling ;
+    owl:inverseOf beo:participatedIn ;
     .
+
