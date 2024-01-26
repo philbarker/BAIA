@@ -25,19 +25,19 @@ bee:Scyld a bee:Shefing ;
 
 ## lines 1-52
 :Event001 a beo:Event ;
-    skos:prefLabel "Scyld's fighting" ;
+    rdfs:label "Scyld's fighting" ;
     dc:description "Scyld took mead-benches, taught foes to fear him."@en ;
     beo:participant bee:Scyld ;
 .
 
 :Event002 a beo:Event ;
-    skos:prefLabel "Finding of Scyld" ;
+    rdfs:label "Finding of Scyld" ;
     dc:description "Scyld found in childhood, lacking clothing."@en ;
     beo:participant bee:Scyld ;
 .
 
 :Event003 a beo:Event ;
-    skos:prefLabel "Rule of Scyld" ;
+    rdfs:label "Rule of Scyld" ;
     dc:description "The clans settled on the coast obey Scyld."@en ;
     beo:participant bee:Scyld ;
 .
@@ -55,13 +55,13 @@ bee:Beow a bee:Scylding ;
 .
 
 :Event004 a beo:Death ;
-    skos:prefLabel "Death of Scyld" ;
+    rdfs:label "Death of Scyld" ;
     dc:description "At the hour shaped for him Scyld departed."@en ;
     beo:participant bee:Scyld ;
 .
 
 :Event005 a beo:Funeral ;
-    skos:prefLabel "Funeral of Scyld" ;
+    rdfs:label "Funeral of Scyld" ;
     dc:description "A boat with ringed neck rode in the haven ... [they] gave him to the flood."@en ;
     beo:participant bee:Scyld, bee:Scylding ;
 .
@@ -89,12 +89,12 @@ bee:Hrothgar a bee:Scylding ;
 
 
 :Event006 a beo:Action ;
-    skos:prefLabel "Hrothgar builds Heorot" ;
+    rdfs:label "Hrothgar builds Heorot" ;
     beo:agent bee:Hrothgar ;
     beo:object bee:Heorot ;
     .
 
-bee:Heorot skos:prefLabel "Heorot"@ang ,
+bee:Heorot rdfs:label "Heorot"@ang ,
                       "Staghall"@en ;
 .
 
@@ -120,7 +120,7 @@ bee:Beowulf a bee:Geat ;
 
 ## lines 86-114
 :event007 a beo:Event ;
-    skos:prefLabel "Grendel disturbed" ;
+    rdfs:label "Grendel disturbed" ;
     dc:description "The monster who waited in the darkness suffered torment, constant pain."@en ; 
 .
 
