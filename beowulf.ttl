@@ -25,19 +25,19 @@ bee:Scyld a bee:Shefing ;
 
 ## lines 1-52
 :Event001 a beo:Event ;
-    rdfs:label "Scyld's fighting" ;
+    skos:prefLabel "Scyld's fighting" ;
     dc:description "Scyld took mead-benches, taught foes to fear him."@en ;
     beo:participant bee:Scyld ;
 .
 
 :Event002 a beo:Event ;
-    rdfs:label "Finding of Scyld" ;
+    skos:prefLabel "Finding of Scyld" ;
     dc:description "Scyld found in childhood, lacking clothing."@en ;
     beo:participant bee:Scyld ;
 .
 
 :Event003 a beo:Event ;
-    rdfs:label "Rule of Scyld" ;
+    skos:prefLabel "Rule of Scyld" ;
     dc:description "The clans settled on the coast obey Scyld."@en ;
     beo:participant bee:Scyld ;
 .
@@ -55,13 +55,13 @@ bee:Beow a bee:Scylding ;
 .
 
 :Event004 a beo:Death ;
-    rdfs:label "Death of Scyld" ;
+    skos:prefLabel "Death of Scyld" ;
     dc:description "At the hour shaped for him Scyld departed."@en ;
     beo:participant bee:Scyld ;
 .
 
 :Event005 a beo:Funeral ;
-    rdfs:label "Funeral of Scyld" ;
+    skos:prefLabel "Funeral of Scyld" ;
     dc:description "A boat with ringed neck rode in the haven ... [they] gave him to the flood."@en ;
     beo:participant bee:Scyld, bee:Scylding ;
 .
@@ -77,6 +77,7 @@ bee:Healfdene a bee:Scylding ;
 . 
 
 bee:Ursula beo:husband bee:Onela ;
+    rdfs:label "Yrse"@ang, "Ursula"@en ;
 .
 
 bee:Onela a beo:Scylfing .
@@ -88,11 +89,14 @@ bee:Hrothgar a bee:Scylding ;
 
 
 :Event006 a beo:Action ;
-    dc:description "Hrothgar builds Heorot" ;
+    skos:prefLabel "Hrothgar builds Heorot" ;
     beo:agent bee:Hrothgar ;
     beo:object bee:Heorot ;
     .
 
+bee:Heorot skos:prefLabel "Heorot"@ang ,
+                      "Staghall"@en ;
+.
 
 bee:Cain a beo:Person ;
     beo:killed bee:Abel ;
@@ -112,4 +116,13 @@ bee:Beowulf a bee:Geat ;
     beo:killed bee:Grendel ;
     beo:parent bee:Edgetheow , bee:HrethelsDaughter;
     rdfs:comment "The hero of the poem."@en ;
+.
+
+## lines 86-114
+:event007 a beo:Event ;
+    skos:prefLabel "Grendel disturbed" ;
+    dc:description "The monster who waited in the darkness suffered torment, constant pain."@en ; 
+.
+
+beo:Grendel dc:description "The monster who waited in the darkness" ;
 .
