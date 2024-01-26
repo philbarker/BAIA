@@ -152,7 +152,6 @@ beo:ancestor a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
     owl:inverseOf beo:descendant ;
-    owl:propertyDisjointWith beo:descendant ;
     .
 
 beo:brother a owl:ObjectProperty ;
@@ -186,7 +185,6 @@ beo:descendant a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
     owl:inverseOf beo:ancestor ;
-    owl:propertyDisjointWith beo:ancestor ;
     .
 
 beo:father a owl:ObjectProperty, owl:FunctionalProperty ;
