@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/pjjknet/public_html/BAIA
+    - /bin/cp *.ttl $DEPLOYPATH
+    - /bin/cp *.html $DEPLOYPATH
