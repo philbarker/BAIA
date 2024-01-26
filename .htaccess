@@ -25,7 +25,7 @@ AddType text/html  .html
 	RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
 	RewriteCond %{HTTP_ACCEPT} application/rdf\+turtle [OR]
 	RewriteCond %{HTTP_ACCEPT} application/turtle
-	RewriteRule "ontology(.*)$" ontology.ttl [R=303,L]
+	RewriteRule "ontology\/" ontology.ttl [R=303,L]
 
 	# RDF/XML? well, OK
 	RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
@@ -45,8 +45,5 @@ AddType text/html  .html
 	RewriteCond %{HTTP_ACCEPT} text/html
     RewriteRule "test(.*)$" "testSpeede.html" [R=303,L]
 
-
-	# Finally default to HTML
-    RewriteRule "phil(.*)$" "phil/about" [R=303,L]
 
 </ifModule>
