@@ -1,0 +1,52 @@
+# Turn off MultiViews
+Options -MultiViews
+
+#Begin force to https
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+#end force to https
+
+#Conneg
+AddType application/json json-ld
+AddType application/rdf+xml .rdf
+AddType text/turtle  .ttl
+AddType text/html  .html
+
+<ifModule mod_rewrite.c>
+    RewriteEngine on
+
+	# make sure we don't have the file or a directory index to serve
+	# the rest fails to redirect if we do
+	RewriteCond %{REQUEST_FILENAME} -f [OR]
+	RewriteCond %{REQUEST_FILENAME} -d 
+	RewriteRule .* - [L]
+
+	# Serve turtle content when requested
+	RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
+	RewriteCond %{HTTP_ACCEPT} application/rdf\+turtle [OR]
+	RewriteCond %{HTTP_ACCEPT} application/turtle
+	RewriteRule "^([^/]*)(/*)(.*)$" $1.ttl [R=303,L]
+
+	# RDF/XML? well, OK
+	RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
+	RewriteRule "phil(.*)$" phil.rdf [R=303,L]
+
+
+	# Serve HTML for those that want it
+	RewriteCond %{HTTP_ACCEPT} application/json
+    RewriteRule "test(.*)$" "testSpeede.json" [R=303,L]
+
+
+	# Serve HTML for those that want it
+	RewriteCond %{HTTP_ACCEPT} text/html
+    RewriteRule "phil(.*)$" "phil/about" [R=303,L]
+
+	# Serve HTML for those that want it
+	RewriteCond %{HTTP_ACCEPT} text/html
+    RewriteRule "test(.*)$" "testSpeede.html" [R=303,L]
+
+
+	# Finally default to HTML
+    RewriteRule "phil(.*)$" "phil/about" [R=303,L]
+
+</ifModule>
