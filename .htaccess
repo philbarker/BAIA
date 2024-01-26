@@ -25,7 +25,7 @@ AddType text/html  .html
 	RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
 	RewriteCond %{HTTP_ACCEPT} application/rdf\+turtle [OR]
 	RewriteCond %{HTTP_ACCEPT} application/turtle
-	RewriteRule "ontology(.*)$" $1.ttl [R=303,L]
+	RewriteRule "ontology/(.*)$" ontology.ttl [R=303,L]
 
 	# RDF/XML? well, OK
 	RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
