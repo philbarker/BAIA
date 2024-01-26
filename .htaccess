@@ -29,12 +29,7 @@ AddType text/html  .html
 
 	# RDF/XML? well, OK
 	RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-	RewriteRule "phil(.*)$" phil.rdf [R=303,L]
-
-
-	# Serve HTML for those that want it
-	RewriteCond %{HTTP_ACCEPT} application/json
-    RewriteRule "test(.*)$" "testSpeede.json" [R=303,L]
+	RewriteRule "^([^/]*)(/*)(.*)$" $1.rdf [R=303,L]
 
 
 	# Serve HTML for those that want it
@@ -43,10 +38,10 @@ AddType text/html  .html
 
 	# Serve HTML for those that want it
 	RewriteCond %{HTTP_ACCEPT} text/html
-    RewriteRule "test(.*)$" "testSpeede.html" [R=303,L]
+	RewriteRule "^([^/]*)(/*)(.*)$" index.html [R=303,L]
 
 
 	# Finally default to HTML
-    RewriteRule "phil(.*)$" "phil/about" [R=303,L]
+	RewriteRule "^([^/]*)(/*)(.*)$" index.html [R=303,L]
 
 </ifModule>
