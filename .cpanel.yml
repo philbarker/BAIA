@@ -2,6 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/pjjknet/public_html/BAIA
+    - /bin/cp .htaccess $DEPLOYPATH
     - /bin/cp beowulf.ttl $DEPLOYPATH
     - /bin/cp beowulf.xml $DEPLOYPATH
     - /bin/cp entities.ttl $DEPLOYPATH
