@@ -6,30 +6,31 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
+  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event005">
+    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Funeral"/>
+    <rdfs:label>Funeral of Scyld</rdfs:label>
+    <dc:description xml:lang="en">A boat with ringed neck rode in the haven ... [they] gave him to the flood.</dc:description>
+    <beo:participant rdf:resource="https://baia.pjjk.net/entities/Scyld"/>
+    <beo:participant rdf:resource="https://baia.pjjk.net/entities/Scylding"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event003">
+    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Event"/>
+    <rdfs:label>Rule of Scyld</rdfs:label>
+    <dc:description xml:lang="en">The clans settled on the coast obey Scyld.</dc:description>
+    <beo:participant rdf:resource="https://baia.pjjk.net/entities/Scyld"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/entities/Onela">
+    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Scylfing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/event007">
+    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Event"/>
+    <rdfs:label>Grendel disturbed</rdfs:label>
+    <dc:description xml:lang="en">The monster who waited in the darkness suffered torment, constant pain.</dc:description>
+  </rdf:Description>
   <rdf:Description rdf:about="https://baia.pjjk.net/entities/Hrothgar">
     <rdf:type rdf:resource="https://baia.pjjk.net/entities/Scylding"/>
     <beo:personName xml:lang="en">Hrothgar</beo:personName>
     <beo:personName xml:lang="ang">Hrōðgār</beo:personName>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <owl:imports rdf:resource="https://baia.pjjk.net/ontology/"/>
-    <owl:imports rdf:resource="https://baia.pjjk.net/entities/"/>
-    <dc:title xml:lang="en">Beowulf (Poem)</dc:title>
-    <dc:source rdf:resource="https://www.wikidata.org/wiki/Q48328"/>
-    <dc:source rdf:resource="https://openlibrary.org/books/OL5472902M/Beowulf#id"/>
-    <dc:description xml:lang="en">Assertions from the poem Beowulf.</dc:description>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event002">
-    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Event"/>
-    <rdfs:label>Finding of Scyld</rdfs:label>
-    <dc:description xml:lang="en">Scyld found in childhood, lacking clothing.</dc:description>
-    <beo:participant rdf:resource="https://baia.pjjk.net/entities/Scyld"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/entities/Cain">
-    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Person"/>
-    <beo:killed rdf:resource="https://baia.pjjk.net/entities/Abel"/>
-    <beo:descendant rdf:resource="https://baia.pjjk.net/entities/Grendel"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://baia.pjjk.net/entities/Beowulf">
     <rdf:type rdf:resource="https://baia.pjjk.net/entities/Geat"/>
@@ -40,31 +41,6 @@
     <beo:parent rdf:resource="https://baia.pjjk.net/entities/HrethelsDaughter"/>
     <rdfs:comment xml:lang="en">The hero of the poem.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/entities/Beow">
-    <rdf:type rdf:resource="https://baia.pjjk.net/entities/Scylding"/>
-    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Dane"/>
-    <beo:gender rdf:resource="https://baia.pjjk.net/ontology/Male"/>
-    <beo:father rdf:resource="https://baia.pjjk.net/entities/Scyld"/>
-    <beo:personName xml:lang="ang">Beowulf</beo:personName>
-    <beo:personName xml:lang="ang">Beow</beo:personName>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event003">
-    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Event"/>
-    <rdfs:label>Rule of Scyld</rdfs:label>
-    <dc:description xml:lang="en">The clans settled on the coast obey Scyld.</dc:description>
-    <beo:participant rdf:resource="https://baia.pjjk.net/entities/Scyld"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/event007">
-    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Event"/>
-    <rdfs:label>Grendel disturbed</rdfs:label>
-    <dc:description xml:lang="en">The monster who waited in the darkness suffered torment, constant pain.</dc:description>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event001">
-    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Event"/>
-    <rdfs:label>Scyld's fighting</rdfs:label>
-    <dc:description xml:lang="en">Scyld took mead-benches, taught foes to fear him.</dc:description>
-    <beo:participant rdf:resource="https://baia.pjjk.net/entities/Scyld"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://baia.pjjk.net/entities/Scyld">
     <rdf:type rdf:resource="https://baia.pjjk.net/entities/Shefing"/>
     <beo:personName xml:lang="en">Scyld Shefing</beo:personName>
@@ -73,23 +49,17 @@
     <beo:son rdf:resource="https://baia.pjjk.net/entities/Beow"/>
     <beo:child rdf:resource="https://baia.pjjk.net/entities/Beow"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event004">
-    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Death"/>
-    <rdfs:label>Death of Scyld</rdfs:label>
-    <dc:description xml:lang="en">At the hour shaped for him Scyld departed.</dc:description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event006">
+    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Action"/>
+    <rdfs:label>Hrothgar builds Heorot</rdfs:label>
+    <beo:agent rdf:resource="https://baia.pjjk.net/entities/Hrothgar"/>
+    <beo:object rdf:resource="https://baia.pjjk.net/entities/Heorot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event001">
+    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Event"/>
+    <rdfs:label>Scyld's fighting</rdfs:label>
+    <dc:description xml:lang="en">Scyld took mead-benches, taught foes to fear him.</dc:description>
     <beo:participant rdf:resource="https://baia.pjjk.net/entities/Scyld"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/entities/Onela">
-    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Scylfing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/entities/Ursula">
-    <beo:husband rdf:resource="https://baia.pjjk.net/entities/Onela"/>
-    <rdfs:label xml:lang="ang">Yrse</rdfs:label>
-    <rdfs:label xml:lang="en">Ursula</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/entities/Heorot">
-    <rdfs:label xml:lang="ang">Heorot</rdfs:label>
-    <rdfs:label xml:lang="en">Staghall</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://baia.pjjk.net/entities/Healfdene">
     <rdf:type rdf:resource="https://baia.pjjk.net/entities/Scylding"/>
@@ -99,23 +69,53 @@
     <beo:son rdf:resource="https://baia.pjjk.net/entities/Halga"/>
     <beo:daughter rdf:resource="https://baia.pjjk.net/entities/Ursula"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event006">
-    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Action"/>
-    <rdfs:label>Hrothgar builds Heorot</rdfs:label>
-    <beo:agent rdf:resource="https://baia.pjjk.net/entities/Hrothgar"/>
-    <beo:object rdf:resource="https://baia.pjjk.net/entities/Heorot"/>
+  <rdf:Description rdf:about="https://baia.pjjk.net/ontology/Grendel">
+    <dc:description>The monster who waited in the darkness</dc:description>
   </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event005">
-    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Funeral"/>
-    <rdfs:label>Funeral of Scyld</rdfs:label>
-    <dc:description xml:lang="en">A boat with ringed neck rode in the haven ... [they] gave him to the flood.</dc:description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/entities/Beow">
+    <rdf:type rdf:resource="https://baia.pjjk.net/entities/Scylding"/>
+    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Dane"/>
+    <beo:gender rdf:resource="https://baia.pjjk.net/ontology/Male"/>
+    <beo:father rdf:resource="https://baia.pjjk.net/entities/Scyld"/>
+    <beo:personName xml:lang="ang">Beowulf</beo:personName>
+    <beo:personName xml:lang="ang">Beow</beo:personName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/entities/Heorot">
+    <rdfs:label xml:lang="ang">Heorot</rdfs:label>
+    <rdfs:label xml:lang="en">Staghall</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event004">
+    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Death"/>
+    <rdfs:label>Death of Scyld</rdfs:label>
+    <dc:description xml:lang="en">At the hour shaped for him Scyld departed.</dc:description>
     <beo:participant rdf:resource="https://baia.pjjk.net/entities/Scyld"/>
-    <beo:participant rdf:resource="https://baia.pjjk.net/entities/Scylding"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/Event002">
+    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Event"/>
+    <rdfs:label>Finding of Scyld</rdfs:label>
+    <dc:description xml:lang="en">Scyld found in childhood, lacking clothing.</dc:description>
+    <beo:participant rdf:resource="https://baia.pjjk.net/entities/Scyld"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/beowulf/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="https://baia.pjjk.net/ontology/"/>
+    <owl:imports rdf:resource="https://baia.pjjk.net/entities/"/>
+    <dc:title xml:lang="en">Beowulf (Poem)</dc:title>
+    <dc:source rdf:resource="https://www.wikidata.org/wiki/Q48328"/>
+    <dc:source rdf:resource="https://openlibrary.org/books/OL5472902M/Beowulf#id"/>
+    <dc:description xml:lang="en">Assertions from the poem Beowulf.</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/entities/Cain">
+    <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Person"/>
+    <beo:killed rdf:resource="https://baia.pjjk.net/entities/Abel"/>
+    <beo:descendant rdf:resource="https://baia.pjjk.net/entities/Grendel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://baia.pjjk.net/entities/Ursula">
+    <beo:husband rdf:resource="https://baia.pjjk.net/entities/Onela"/>
+    <rdfs:label xml:lang="ang">Yrse</rdfs:label>
+    <rdfs:label xml:lang="en">Ursula</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://baia.pjjk.net/entities/Abel">
     <rdf:type rdf:resource="https://baia.pjjk.net/ontology/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://baia.pjjk.net/ontology/Grendel">
-    <dc:description>The monster who waited in the darkness</dc:description>
   </rdf:Description>
 </rdf:RDF>
