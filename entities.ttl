@@ -14,7 +14,7 @@
     owl:imports beo: ;
     dc:title "Beowulf Entities"@en ;
     rdfs:isDefinedBy bee:entities.ttl ;
-    dc:description "Ontology for identifying things from Beowulf and its analogues"@en ;
+    dc:description "Ontology for identifying things from Beowulf and its analogues. Drawn from Beowulf a Verse Translation by Michael Alexander, Penguin Books (1973)."@en ;
     dc:source <https://openlibrary.org/books/OL5472902M/Beowulf#id> ;
 .
 
@@ -156,28 +156,42 @@ bee:Wulfing a beo:People, owl:Class ;
 
 ### People etc.
 
-bee:Abel a owl:NamedIndividual , beo:Person .
+bee:Abel a owl:NamedIndividual , beo:Person ;
+    rdfs:comment "Killed by Cain, his brother. Genesis iv 8."@en ;
+.
 
-bee:Alfhere a owl:NamedIndividual , beo:Person .
+bee:Alfhere a owl:NamedIndividual , beo:Person ;
+    rdfs:comment "Kinsman of Wiglaf."@en ;
+.
 
-bee:Ashhere a owl:NamedIndividual , beo:Person .
+bee:Ashhere a owl:NamedIndividual , beo:Person ;
+    rdfs:comment "Hrothgar's counsellor, Yrmenlaf's brother."@en ;
+.
 
-bee:Beanstan  a owl:NamedIndividual , beo:Person .
+bee:Beanstan  a owl:NamedIndividual , beo:Person ;
+    rdfs:comment "Breca's father."@en ;
+.
 
 bee:Beow a owl:NamedIndividual , beo:Person ;
     owl:differentFrom bee:Beowulf ;
     rdfs:comment "A mythical ancestor, ruler of the Scyldings."@en ;
 .
 
-bee:Beowulf a owl:NamedIndividual , beo:Person .
+bee:Beowulf a owl:NamedIndividual , beo:Person ;
+    rdfs:comment "Son of Ecgtheow the Waymunding; nephew of Hygelac."@en ;
+.
 
-bee:Breca a owl:NamedIndividual , beo:Person .
+bee:Breca a owl:NamedIndividual , beo:Person ;
+    rdfs:comment "Son of beanstan: chief of the Brondings."@en ;
+.
 
-bee:Cain a owl:NamedIndividual , beo:Person .
+bee:Cain a owl:NamedIndividual , beo:Person ;
+    rdfs:comment "Killer of Abel, his younger brother; first fratricide; father of all monsters."@en ;
+.
 
-bee:Cain a owl:NamedIndividual , beo:Person .
-
-bee:DayRaven a owl:NamedIndividual , beo:Person .
+bee:DayRaven a owl:NamedIndividual , beo:Person ;
+    rdfs:comment "Champion of the Franks."@en ;
+.
 
 bee:Eadgils a owl:NamedIndividual , beo:Person .
 
@@ -265,9 +279,11 @@ bee:Ingeld a owl:NamedIndividual , beo:Person .
 
 bee:Ingwine a owl:NamedIndividual , beo:Person .
 
-bee:Offa a owl:NamedIndividual , beo:Person .
-
 bee:Hthere a owl:NamedIndividual , beo:Person .
+
+bee:Ohtere a owl:NamedIndividual , beo:Person .
+
+bee:Offa a owl:NamedIndividual , beo:Person .
 
 bee:Onela a owl:NamedIndividual , beo:Person .
 
@@ -275,14 +291,13 @@ bee:Ongentheow a owl:NamedIndividual , beo:Person .
 
 bee:Oslaf a owl:NamedIndividual , beo:Person .
 
+bee:Sigemund a owl:NamedIndividual , beo:Person .
+
 bee:Scyld a owl:NamedIndividual , beo:Person ;
     rdfs:comment "Mythical forebearer of the Scyldings."@en ;
     rdfs:label "Scyld"@en ;
 .
 
-bee:Sigemund a owl:NamedIndividual , beo:Person .
-
-bee:Scyld a owl:NamedIndividual , beo:Person .
 
 bee:Swerting a owl:NamedIndividual , beo:Person .
 
