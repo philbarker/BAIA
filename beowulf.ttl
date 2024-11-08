@@ -15,7 +15,9 @@
                 bee: ;
     dc:title "Beowulf (Poem)"@en ;
     dc:source <https://www.wikidata.org/wiki/Q48328> ;
-    dc:source <https://openlibrary.org/books/OL5472902M/Beowulf#id> ;
+    dc:source <https://openlibrary.org/books/OL5472902M/Beowulf#id>, 
+        <https://openlibrary.org/works/OL17977102W/Beowulf_and_its_analogues#id>,
+        <https://openlibrary.org/works/OL38048891W/Beowulf_Translation_and_Commentary#id> ;
     dc:description "Assertions from the poem Beowulf."@en .
 
 bee:Scyld a bee:Shefing ; 
@@ -103,8 +105,6 @@ bee:Cain a beo:Person ;
     beo:descendant bee:Grendel ;
 .
 
-bee:Abel a beo:Person .
-
 bee:Scyld a bee:Shefing ; 
     beo:personName "Scyld Shefing"@en ;
     beo:child bee:Beow ;
@@ -115,14 +115,76 @@ bee:Beowulf a bee:Geat ;
                    "Beowulf"@ang ;
     beo:killed bee:Grendel ;
     beo:parent bee:Edgetheow , bee:HrethelsDaughter;
-    rdfs:comment "The hero of the poem."@en ;
+.
+
+bee:Hrethel beo:daughter bee:HrethelsDaughter ;
 .
 
 ## lines 86-114
-:event007 a beo:Event ;
+:Event007 a beo:Event ;
     rdfs:label "Grendel disturbed" ;
-    dc:description "The monster who waited in the darkness suffered torment, constant pain."@en ; 
+    dc:description "The monster who waited in the darkness suffered torment, constant pain heard loud merriment in the hall."@en ; 
 .
 
-beo:Grendel dc:description "The monster who waited in the darkness" ;
+bee:Grendel dc:description "The monster who waited in the darkness. Prowler of the boarder lands." ;
+.
+
+:Event008 a beo:Event ;
+    rdfs:label "Merriment in the hall" ;
+    dc:description "Loud merriment in the hall. The sound of harp, the clear song of the bard."@en ; 
+    beo:eventLocation bee:Heorot ;
+.
+
+:Event009 a beo:Event ;
+    rdfs:label "Cain slew Abel"@en ;
+    beo:agent bee:Cain;
+    beo:participant bee:Abel ;
+.
+
+bee:Cain dc:description "From him descend all unholy broods, ogres, elves and the walking dead."@en ;
+.
+
+## lines 115 - 188
+:Event010 a beo:Event ;
+    rdfs:label "Grendel attacks Heorot"@en ;
+    dc:description "Grendel seized thirty thanes, the next night he wrought he killed more. He took Heorot as his. For 12 years Hrothgar bore this affliction."@en ;
+    beo:agent bee:Grendel ;
+    beo:eventLocation bee:Heorot ;
+.
+
+bee:Hrothgar dc:description "Kindly lord of the Scyldings."@en ;
+.
+
+bee:Heorot dc:description "Hall gleaming with riches."@en ;
+.
+
+## lines 189 - 
+bee:Beowulf beo:thaneOf bee:Hygelac ;
+    dc:description "Mightiest of all men at that time; of high birth and more than human stature."@en
+.
+
+:Event011 a beo:Event ;
+    rdfs:label "Beowulf hears of Grendels deeds." ;
+    beo:agent bee:Beowulf ;
+.
+
+:Event012 a beo:Event ;
+    rdfs:label "Beowulf sails to Heorot." ;
+    dc:description "Picked the bravest champions of the Geats and sailed over the sea."@en ;
+    beo:agent bee:Beowulf ;
+    beo:participant [
+        a beo:WeatherGeat ;
+        dc:decription "A man skilled in sea lore. "@en
+    ]
+.
+
+:Event013 a beo:Event ;
+    rdfs:label "Beowulf arrives." ;
+    dc:description "The Wether-Geats set foot on land."@en ;
+    beo:agent bee:Beowulf ;
+    beo:participant :Watchman ;
+.
+
+:Watchman a beo:Scylding ;
+    beo:thaneOf bee:Hrothgar ;
 .
