@@ -114,7 +114,7 @@ bee:Beowulf a bee:Geat ;
     beo:personName "Beowulf"@en ,
                    "Beowulf"@ang ;
     beo:killed bee:Grendel ;
-    beo:parent bee:Edgetheow , bee:HrethelsDaughter;
+    beo:parent bee:Ecgetheow , bee:HrethelsDaughter;
 .
 
 bee:Hrethel beo:daughter bee:HrethelsDaughter ;
@@ -190,12 +190,12 @@ bee:Watchman a beo:Scylding ;
 .
 
 :Event014 a beo:Event ;
-    rdfs:label "Watchman challenges Beowulf." ;
+    rdfs:label "Watchman challenges Beowulf."@en ;
     beo:agent bee:Watchman ;
     beo:participant bee:Beowulf ;
 .
 
-## lines 258 - 
+## lines 258 - 319
 bee:Beowulf a bee:Geat ;
     beo:thaneOf bee:Hygelac ;
     beo:father bee:Ecgtheow ;
@@ -208,13 +208,40 @@ bee:Ongentheow dc:description "A great champion."@en,
         "Died away from his houstead."@en;
 .
 
-bee:Hrothgar beo:father beo:HalfDane ;
+bee:Hrothgar beo:father beo:Healfdene ;
+    dc:description "lord of the Danes."@en ;
 .
 
-bee:HalfDane rdfs:label "Healfdene"@en ;
-    dc:description "lord of the Danes."@en ;
+bee:Healfdene rdfs:label "Healfdene"@en ;
 .
 
 bee:Beowulf beo:placeOfResidence bee:Wedermark ;
 .
+
+:Event014 a beo:Event ;
+    rdfs:label "Watchman leads Beowulf from the coast to Hereot."@en ;
+    beo:agent bee:Watchman ;
+    beo:participant bee:Beowulf ;
+.
+
+## lines 320 - 370
+bee:HrothgarsHerald rdfs:comment "A proud hero"@en ;
+    beo:thaneOf bee:Hrothgar ;
+.
+
+:Event015 a beo:Event ;
+    rdfs:label "A proud hero asks about Beowulf's band's lineage."@en ;
+    beo:agent bee:HrothgarsHerald ;
+    beo:participant bee:Beowulf ;
+.
+
+bee:Wulfgar a bee:Wendel ;
+    rdfs:label "Wulfgar"@en ;
+    dc:description "Many knew his character, his courage and wisdom."@en ;
+.
+
+bee:Hrothgar dc:description "Old and very grey"@en ;
+.
+
+## lines 370 - 
 

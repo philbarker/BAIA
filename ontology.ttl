@@ -77,6 +77,14 @@ beo:Person a owl:Class, rdfs:Class ;
     owl:equivalentClass sdo:Person ;
     rdfs:comment "Humans, real or imaginary."@en ;
     rdfs:label "Person"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+                        owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty   beo:father ;
+                    ] ;
+    rdfs:subClassOf [ a owl:Restriction ;
+                        owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty   beo:mother ;
+                    ] ;
     .
 
 beo:Place a owl:Class, rdfs:Class ;
@@ -311,6 +319,15 @@ beo:agent a owl:ObjectProperty ;
     rdfs:range beo:Agent ;
     .
 
+beo:agentOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf beo:participantIn ;
+    owl:inverseOf beo:agent ;
+    rdfs:comment "An action caused by this agent."@en ;
+    rdfs:label "Agent Of" ;
+    rdfs:domain beo:Agent ;
+    rdfs:range beo:Action ;
+    .
+
 beo:describedIn a owl:ObjectProperty ;
     rdfs:comment "Indicates where something is described."@en ;
     rdfs:label "described in"@en ;
@@ -324,7 +341,7 @@ beo:object a owl:ObjectProperty ;
     rdfs:range owl:Thing ;
     .
 
-beo:participatedIn a owl:ObjectProperty ;
+beo:participantIn a owl:ObjectProperty ;
     rdfs:comment "An event an agent took part in."@en ;
     rdfs:label "participated in"@en ;
     rdfs:domain foaf:Agent ;

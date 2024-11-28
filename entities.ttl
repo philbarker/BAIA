@@ -7,7 +7,7 @@
 @prefix sdo: <https://schema.org/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/ama#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://baia.pjjk.net/entities/> .
 
 <https://baia.pjjk.net/entities/> a owl:Ontology ;
@@ -289,6 +289,8 @@ bee:Onela a owl:NamedIndividual , beo:Person .
 
 bee:Ongentheow a owl:NamedIndividual , beo:Person .
 
+bee:HrothgarsHerald a owl:NamedIndividual , beo:Person .
+
 bee:Oslaf a owl:NamedIndividual , beo:Person .
 
 bee:Sigemund a owl:NamedIndividual , beo:Person .
@@ -297,7 +299,6 @@ bee:Scyld a owl:NamedIndividual , beo:Person ;
     rdfs:comment "Mythical forebearer of the Scyldings."@en ;
     rdfs:label "Scyld"@en ;
 .
-
 
 bee:Swerting a owl:NamedIndividual , beo:Person .
 
