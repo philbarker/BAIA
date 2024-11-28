@@ -158,7 +158,7 @@ bee:Hrothgar dc:description "Kindly lord of the Scyldings."@en ;
 bee:Heorot dc:description "Hall gleaming with riches."@en ;
 .
 
-## lines 189 - 
+## lines 189 - 257
 bee:Beowulf beo:thaneOf bee:Hygelac ;
     dc:description "Mightiest of all men at that time; of high birth and more than human stature."@en
 .
@@ -174,7 +174,7 @@ bee:Beowulf beo:thaneOf bee:Hygelac ;
     beo:agent bee:Beowulf ;
     beo:participant [
         a beo:WeatherGeat ;
-        dc:decription "A man skilled in sea lore. "@en
+        dc:description "A man skilled in sea lore. "@en
     ]
 .
 
@@ -182,9 +182,39 @@ bee:Beowulf beo:thaneOf bee:Hygelac ;
     rdfs:label "Beowulf arrives." ;
     dc:description "The Wether-Geats set foot on land."@en ;
     beo:agent bee:Beowulf ;
-    beo:participant :Watchman ;
 .
 
-:Watchman a beo:Scylding ;
+bee:Watchman a beo:Scylding ;
     beo:thaneOf bee:Hrothgar ;
+    dc:description "The Scylding warden who garded the sea-cliffs."@en
 .
+
+:Event014 a beo:Event ;
+    rdfs:label "Watchman challenges Beowulf." ;
+    beo:agent bee:Watchman ;
+    beo:participant bee:Beowulf ;
+.
+
+## lines 258 - 
+bee:Beowulf a bee:Geat ;
+    beo:thaneOf bee:Hygelac ;
+    beo:father bee:Ecgtheow ;
+    beo:gender beo:Male ;
+.
+
+bee:Ongentheow dc:description "A great champion."@en,
+        "Famous and well remembered"@en,
+        "Lived many winters."@en,
+        "Died away from his houstead."@en;
+.
+
+bee:Hrothgar beo:father beo:HalfDane ;
+.
+
+bee:HalfDane rdfs:label "Healfdene"@en ;
+    dc:description "lord of the Danes."@en ;
+.
+
+bee:Beowulf beo:placeOfResidence bee:Wedermark ;
+.
+

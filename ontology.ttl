@@ -147,6 +147,13 @@ beo:personName a owl:DatatypeProperty, rdf:Property ;
     rdfs:subPropertyOf beo:name ;
     .
 
+beo:placeOfResidence a owl:ObjectProperty, rdf:Property ;
+    rdfs:comment "A place where some lives or has lived."@en ;
+    rdfs:label "Place of residence"@en ;
+    rdfs:domain beo:Person ;
+    rdfs:range beo:Place ;
+.
+
 ### Inter-agent relationships
 beo:ancestor a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Pregenitor. Parent, grandparent, great grandparent etc."@en ;

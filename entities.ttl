@@ -199,7 +199,7 @@ bee:Eanmund a owl:NamedIndividual , beo:Person .
 
 bee:Edgelaf a owl:NamedIndividual , beo:Person .
 
-bee:Edgetheow a owl:NamedIndividual , beo:Person .
+bee:Ecgetheow a owl:NamedIndividual , beo:Person .
 
 bee:Edgewela a owl:NamedIndividual , beo:Person .
 
@@ -273,7 +273,7 @@ bee:Hunlaf a owl:NamedIndividual , beo:Person .
 
 bee:Hygd a owl:NamedIndividual , beo:Person .
 
-bee:Hygelic a owl:NamedIndividual , beo:Person .
+bee:Hygelac a owl:NamedIndividual , beo:Person .
 
 bee:Ingeld a owl:NamedIndividual , beo:Person .
 
@@ -306,6 +306,8 @@ bee:Unferth a owl:NamedIndividual , beo:Person .
 bee:Ursula a owl:NamedIndividual , beo:Person .
 
 bee:Wæls a owl:NamedIndividual , beo:Person .
+
+bee:Watchman a owl:NamedIndividual , beo:Person .
 
 bee:Wayland a owl:NamedIndividual , beo:Person .
 
@@ -341,6 +343,9 @@ bee:Hronesness  a owl:NamedIndividual , beo:Place ;
     rdfs:label "Whales ness"@en ;
 .
 
+bee:Wedermark a owl:NamedIndividual, beo:Place ;
+    rdfs:label "Wedermark"@en ;
+.
 
 ### Things
 
