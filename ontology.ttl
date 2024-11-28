@@ -212,6 +212,24 @@ beo:father a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:subPropertyOf beo:parent, beo:kin ;
     .
 
+beo:allyOf a owl:ObjectProperty ;
+    rdfs:comment "Person whom this person supports."@en ;
+    rdfs:label "Ally of"@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    rdfs:subPropertyOf foaf:knows ;
+    owl:inverseOf beo:hasAlly ;
+.
+
+beo:hasAlly a owl:ObjectProperty ;
+    rdfs:comment "Person who supports this person."@en ;
+    rdfs:label "Has Ally"@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    rdfs:subPropertyOf foaf:knows ;
+    owl:inverseOf beo:allyOf ;
+.
+
 beo:thaneOf a owl:ObjectProperty ;
     rdfs:comment "Person whom a noble has as overlord; from whom they derive their status or land."@en ;
     rdfs:label "Thane of"@en ;

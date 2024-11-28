@@ -198,7 +198,7 @@ bee:Watchman a beo:Scylding ;
 ## lines 258 - 319
 bee:Beowulf a bee:Geat ;
     beo:thaneOf bee:Hygelac ;
-    beo:father bee:Ecgtheow ;
+    beo:father bee:Ecgetheow ;
     beo:gender beo:Male ;
 .
 
@@ -208,7 +208,7 @@ bee:Ongentheow dc:description "A great champion."@en,
         "Died away from his houstead."@en;
 .
 
-bee:Hrothgar beo:father beo:Healfdene ;
+bee:Hrothgar beo:father bee:Healfdene ;
     dc:description "lord of the Danes."@en ;
 .
 
@@ -245,3 +245,17 @@ bee:Hrothgar dc:description "Old and very grey"@en ;
 
 ## lines 370 - 
 
+bee:Hrothgar dc:description "Protector of the Scyldings"@en ;
+.
+
+bee:Beowulf beo:father bee:Ecgetheow ;
+    dc:description "His father was Ecgtheow" ;
+    beo:mother bee:HrethelsDaughter ;
+.
+
+bee:HrethelsDaughter beo:father bee:Hrethel ;
+    dc:description "Hrethel's only daughter."@en ;
+.
+
+bee:Ecgetheow beo:allyOf bee:Hrothgar ;
+.
