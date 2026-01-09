@@ -243,19 +243,65 @@ bee:Wulfgar a bee:Wendel ;
 bee:Hrothgar dc:description "Old and very grey"@en ;
 .
 
-## lines 370 - 
+## lines 370 - 404
 
 bee:Hrothgar dc:description "Protector of the Scyldings"@en ;
 .
 
+bee:Event016 a beo:Event ;
+    beo:agent beo:Hrothgar ;
+    beo:eventLocation bee:Heorot ;
+    rdfs:label "Hrothgar describes Beowulf"@en ;
+    dc:description "Hrothgar describes Beowulfs parents and reputation."@en ;
+.
+
+
 bee:Beowulf beo:father bee:Ecgetheow ;
+    beo:describedIn bee:Event016 ;
     dc:description "His father was Ecgtheow" ;
     beo:mother bee:HrethelsDaughter ;
 .
 
-bee:HrethelsDaughter beo:father bee:Hrethel ;
+bee:Hrethel a bee:Geat ; 
+    beo:describedIn bee:Event016 ;
+.
+
+bee:HrethelsDaughter beo:father bee:Hrethel  ; 
+    beo:describedIn bee:Event016 ;
+    beo:husband bee:Ecgetheow ;
     dc:description "Hrethel's only daughter."@en ;
 .
 
-bee:Ecgetheow beo:allyOf bee:Hrothgar ;
+bee:Ecgetheow beo:allyOf bee:Hrothgar  ; 
+    beo:describedIn bee:Event016 ;
 .
+
+bee:Beowulf dc:description "His hand's grasp had the strength of thity men."@en  ; 
+    beo:describedIn bee:Event016 ;
+.
+
+bee:Hrothgar dc:description "The lord of the North Danes."@en  ; 
+    beo:describedIn bee:Event017 ;
+.
+
+bee:Event017 a beo:Event ;
+    beo:agent bee:Wulfgar ;
+    beo:eventLocation bee:Heorot ;
+    beo:participant bee:Beowulf ;
+    rdfs:label "Wulfgar admits the Geats into Heorot"@en ;
+    dc:description "Wulfgar: I am to tell you all...you are welcome. "@en ;
+.
+
+# lines 405 - 436
+
+bee:Event018 a beo:Event ;
+    beo:agent bee:Beowulf ;
+    beo:eventLocation bee:Heorot ;
+    rdfs:label "Beowulfs first speech to Hrothgar" ;
+    beo:participant bee:Hrothgar ;
+    dc:description "Beowulf boasts and offers to fight Grendel without weapons."
+    .
+
+bee:Beowulf beo:father [
+    beo:killed bee:Heatholaf ;
+] .

@@ -99,7 +99,7 @@ bee:Hetware a beo:People, owl:Class ;
 bee:Huga a beo:People, owl:Class ;
     rdfs:subClassOf beo:Person ; 
     rdfs:comment "A Frankish people."@en ;
-    rdfs:label "Hetware"@en ;
+    rdfs:label "Huga"@en ;
 .
 
 bee:Scylding a beo:Clan, owl:Class ;
@@ -193,65 +193,125 @@ bee:DayRaven a owl:NamedIndividual , beo:Person ;
     rdfs:comment "Champion of the Franks."@en ;
 .
 
-bee:Eadgils a owl:NamedIndividual , beo:Person .
+bee:Eadgils a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Swedish prince, son of Ohthere, brother of Eanmund"@en ;
+.
 
-bee:Eanmund a owl:NamedIndividual , beo:Person .
+bee:Eanmund a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Swedish prince, sone of Ohthere, younger borther of Eadgils"@en ;
+.
 
-bee:Edgelaf a owl:NamedIndividual , beo:Person .
+bee:Edgelaf a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Father of Unferth"@en ;
+.
 
-bee:Ecgetheow a owl:NamedIndividual , beo:Person .
+bee:Ecgetheow a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "A Waymunding, father of Beowulf."@en ;
+.
 
-bee:Edgewela a owl:NamedIndividual , beo:Person .
+bee:Edgewela a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "A Danish king."@en ;
+.
 
-bee:Eofor a owl:NamedIndividual , beo:Person .
+bee:Eofor a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Son of Wonred, brother of Wulf, slayer of Ongentheow."@en ;
+.
 
-bee:Eomer a owl:NamedIndividual , beo:Person .
+bee:Eomer a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Son of Offa the Angle."@en ;
+.
 
-bee:Eormenric a owl:NamedIndividual , beo:Person .
+bee:Eormenric a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "King of the East Goths."@en ;
+.
 
-bee:Finn a owl:NamedIndividual , beo:Person .
+bee:Finn a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "King of the East Frisians, ruler of the Jutes."@en ;
+.
 
-bee:Fitela a owl:NamedIndividual , beo:Person .
+bee:Fitela a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Nephew and son of Sigemund"@en ;
+.
 
-bee:Folcwalda a owl:NamedIndividual , beo:Person .
+bee:Folcwalda a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Father of Finn."@en ;
+.
 
-bee:Freawaru a owl:NamedIndividual , beo:Person .
+bee:Freawaru a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Daughter of Hrothgar"@en ;
+.
 
-bee:Froda a owl:NamedIndividual , beo:Person .
+bee:Froda a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "King of the Heathobards, father of Ingeld."@en ;
+.
 
-bee:Garmund a owl:NamedIndividual , beo:Person .
+bee:Garmund a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Father of Offa the Angel."@en ;
+.
 
-bee:Grendel a owl:NamedIndividual , beo:Monster .
+bee:Grendel a owl:NamedIndividual , beo:Monster ;
+        rdfs:comment "Monster descended from Cain, killed by Beowulf."@en ;
+.
 
-bee:Guthlaf a owl:NamedIndividual , beo:Person .
+bee:Guthlaf a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Danish follower of Hnæf, then of Hengest."@en ;
+.
 
-bee:Halga a owl:NamedIndividual , beo:Person .
+bee:Halga a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Younger brother of Hrothgar, father of Hrothulf."@en ;
+.
 
-bee:Hama a owl:NamedIndividual , beo:Person .
+bee:Hama a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Hero who took the Brising necklace from Eormanric."@en ;
+.
 
-bee:Hareth a owl:NamedIndividual , beo:Person .
+bee:Hareth a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Father of Hygd"@en ;
+.
 
-bee:Hathkin a owl:NamedIndividual , beo:Person .
+bee:Hathkin a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Son of Hrethel, killed by Ongentheow."@en ;
+.
 
-bee:Healfdene a owl:NamedIndividual , beo:Person .
+bee:Healfdene a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "King of the Danes."@en ;
+.
 
-bee:Heardred a owl:NamedIndividual , beo:Person .
+bee:Heardred a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "King, son of Hygelac and Hygd, killed by Onela."@en ;
+.
 
-bee:Heatholaf a owl:NamedIndividual , beo:Person .
+bee:Heatholaf a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "A Wulfing, killed by Edgetheow."@en ;
+.
 
-bee:Hengest a owl:NamedIndividual , beo:Person .
+bee:Hengest a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "A leader."@en ;
+.
 
-bee:Heorogar a owl:NamedIndividual , beo:Person .
+bee:Heorogar a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Danish king, elder brother of Hrothgar."@en ;
+.
 
-bee:Heoroweard a owl:NamedIndividual , beo:Person .
+bee:Heoroweard a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Son of Heorogar."@en ;
+.
 
-bee:Herebeald a owl:NamedIndividual , beo:Person .
+bee:Herebeald a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Son of Hrethel, killed by Hathkin"@en ;
+.
 
-bee:Heremod a owl:NamedIndividual , beo:Person .
+bee:Heremod a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "A Danish tyrant."@en ;
+.
 
-bee:Hereric a owl:NamedIndividual , beo:Person .
+bee:Hereric a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Headred's uncle."@en ;
+.
 
-bee:Hildeburgh a owl:NamedIndividual , beo:Person .
+bee:Hildeburgh a owl:NamedIndividual , beo:Person ;
+        rdfs:comment "Wife of Finn, daughter of Hoc, sister of Hnæf."@en ;
+.
 
 bee:Hnæf a owl:NamedIndividual , beo:Person .
 

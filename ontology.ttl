@@ -165,7 +165,7 @@ beo:placeOfResidence a owl:ObjectProperty, rdf:Property ;
 ### Inter-agent relationships
 beo:ancestor a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:comment "Pregenitor. Parent, grandparent, great grandparent etc."@en ;
-    rdfs:label "descendant"@en ;
+    rdfs:label "ancester"@en ;
     rdfs:domain foaf:Agent ;
     rdfs:range foaf:Agent ;
     owl:inverseOf beo:descendant ;
